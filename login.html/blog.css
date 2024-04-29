@@ -10,13 +10,17 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 5px;
+    
+}
+
+.super{
+    display: flex;
 }
 .sidebar{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 80px;
+    top: 0px;
+    left: 0px;
+    width: 240px;
     height: 100%;
     background: rgba(14, 14, 100, 0.2);
     padding: 6px 14px;
@@ -24,7 +28,7 @@ body{
 }
 
 .sidebar.active{
-    width: 190px;
+    width: 240px;
 }
 .sidebar .logo-menu{
     display: flex;
@@ -37,7 +41,7 @@ body{
     font-size: 25px;
     color: black;
     pointer-events: none;
-    opacity: 0;
+    opacity: 1;
     transition: .3s;
 }
 .sidebar.active .logo-menu .logo{
@@ -47,7 +51,7 @@ body{
 }
 .sidebar .logo-menu .toggle-btn{
     position: absolute;
-    left: 50%;
+    margin-left: 200px;
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
@@ -58,8 +62,8 @@ body{
     cursor: pointer;
     transition: .5s;
 }
-.sidebar.active .logo-menu .toggle-btn{
-    left: 90%;
+.sidebar.active .logo-menu {
+    left: 157px;
 
 }
 .sidebar .list{
@@ -69,7 +73,7 @@ body{
     list-style: none;
     width: 100%;
     height: 50px;
-    margin: 5px 0;
+    margin: 10px 0;
     line-height: 50px;
 }
 .list .list-item a{
@@ -93,8 +97,39 @@ body{
     text-align: center;
     line-height: 50px;
 }
+
+.list .list-items{
+    margin-top: 90px;
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    line-height: 50px;
+}
+.list .list-items a{
+    margin-top: 280px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: .5s;
+    
+}
+.list .list-items.active a,
+.list .list-items a:hover{
+    background: rgba(255,255,255, .2);
+}
+.list .list-items a i{
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
 .sidebar .link-name{
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
     transition: opacity .3s;
 }
@@ -106,16 +141,17 @@ body{
 .info{
     overflow: hidden;
     justify-content: left;
+    padding-left: 200px;
 }
 .heading h1{
     color: black;
     font-size: 40px;
-    text-align: center;
+    padding-left: 90px;
     margin-top: 35px;
     font-weight: 450;   
 }
 .info .heading h1:hover{
-    width: 190;
+    width: 270;
 }
 .container{
     display: flex;
@@ -124,7 +160,7 @@ body{
     width: 90%;
     height: 90%;
     margin: 0px auto;
-    padding: 15px;
+    
 }
 .content{
     flex: 1;
@@ -151,6 +187,8 @@ body{
 .info2{
     flex: 1;
     margin: 100px;
+    animation: fadeInUp 2s ease;
+    margin-top: 10px;
     
 }
 .info2 h2{
@@ -160,6 +198,7 @@ body{
     font-weight: 450;
     justify-content: flex;
     align-items: center;
+    
 }
 .info2 p{
     font-size: 17px;
@@ -168,6 +207,7 @@ body{
     color:black;
     justify-content: center;
     align-items: center;
+    
 }
 .image{
     flex:1;
