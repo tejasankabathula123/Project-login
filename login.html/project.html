@@ -7,22 +7,22 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <link rel="stylesheet" href="project.css">
-    <title>VerbVista| Login & Registration</title>
+    <title>VerbVista | Login & Registration</title>
 </head>
 <body>
-    
+    <div id="preloader"></div>
  <div class="wrapper">
     <nav class="nav">
         <div class="nav-logo">
-            <p>VerbVista</p>
-            <div class="logo"></div>
+            <h3>VerbVista</h3>
+        
         </div>
         <div class="nav-menu" id="navMenu">
             <ul>
-                <li><a href="file:///C:/Users/VINAY/Desktop/file%20explorer/vscode/login.html/project.html" class="link active">Home</a></li>
-                <li><a href="file:///C:/Users/VINAY/Desktop/file%20explorer/vscode/login.html/learn.html" class="link">Learn</a></li>
-                <li><a href="file:///C:/Users/VINAY/Desktop/file%20explorer/vscode/login.html/blog.html" class="link" >Blog</a></li>
-                <li><a href="file:///C:/Users/VINAY/Desktop/file%20explorer/vscode/login.html/about.html" class="link">About</a></li>
+                <li><a href="main-page.html" class="link">Home</a></li>
+                <li><a href="learn.html" class="link">Learn</a></li>
+                <li><a href="blog.html" class="link" >Blog</a></li>
+                <li><a href="about.html" class="link">About</a></li>
             </ul>
         </div>
         <div class="nav-button">
@@ -38,22 +38,24 @@
     <div class="form-box">
         
         <!------------------- login form -------------------------->
-
+        <div class="alert-box">
+            <p class="alert"></p>
+        </div>
         <div class="login-container" id="login">
             <div class="top">
                 <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
                 <header>Login</header>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Username or Email">
+                <input type="email" placeholder="email"  placeholder="Username or Email" class="input-field" required>
                 <i class="bx bx-user"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password">
+                <input type="password" class="input-field" placeholder="Password" required>
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="Sign In">
+                <button type="submit" class="submit" value="Sign In" onclick="location.href='main-page.html'">Sign In</button>
             </div>
             <div class="two-col">
                 <div class="one">
@@ -91,7 +93,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="Register">
+                <button type="submit" class="submit" value="Registration" onclick="location.href='main-page.html'">Register</button>
             </div>
             <div class="two-col">
                 <div class="one">
@@ -144,6 +146,24 @@
      }
  
  </script>
+
+<script>
+    
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load",function(){
+    loader.style.display="none";
+})
+
+</script>
+
+
+
+
+
+
+
+
 
 </body>
 </html>
